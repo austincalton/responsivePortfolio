@@ -129,4 +129,51 @@ main {
     border-right: 1px solid set-text-color($primary-color);
 }
 
+// Work - Projects
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    img {
+        width: 100%;
+        border-top: 4px solid set-text-color($primary-color);
+        border-left: 15px solid set-text-color($primary-color);
+        border-bottom: 15px solid set-text-color($primary-color);
+        border-right: 1px solid set-text-color($primary-color);
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+// Button Styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    font-family: 'Julius Sans One', sans-serif;
+    &:hover {
+        border-color: $secondary-color;
+        color: $secondary-color;
+        @include easeOut;
+    }
+}
+.btn-dark {
+    @extend .btn;
+    color: set-text-color($primary-color);
+    border: solid 3px set-text-color($primary-color);
+}
+.btn-light {
+    @extend .btn;
+    color: $primary-color;
+    background: set-text-color($primary-color);
+    border: solid 3px set-text-color($primary-color);
+}
+
 @import 'mobile';

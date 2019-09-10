@@ -1,4 +1,3 @@
-
 // Menu BTN
 .menu-btn {
     position: absolute;
@@ -113,12 +112,8 @@
     .nav-link {
         display: inline-block;
         position: relative;
-        font-size: 30px;
-        font-family: 'Julius Sans One', sans-serif;
-        // text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 
@@ -133,4 +128,17 @@
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;
     }
+}
+
+// Which page is user on currently
+.current {
+    font-size: 40px;
+    font-family: 'Monoton', cursive;
+    color: $secondary-color;
+    border-bottom: 3px solid set-text-color($primary-color);
+}
+.not-current {
+    font-size: 30px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: set-text-color($primary-color);
 }
