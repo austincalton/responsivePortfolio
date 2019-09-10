@@ -1,13 +1,13 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Julius+Sans+One|Monoton|Montserrat+Subrayada|Pontano+Sans&display=swap');
 * { 
     box-sizing: border-box;
 }
 body {
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI';
@@ -23,13 +23,19 @@ h3 {
 
     &.lg-heading {
         font-size: 6rem;
+        font-family: 'Monoton', cursive;
     }
 
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        font-family: 'Julius Sans One', sans-serif;
+        color: $secondary-color;
     }
+}
+
+h3 {
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 a {
@@ -70,3 +76,57 @@ main {
         }
     }
 }
+
+.bio-image {
+    width: 250px;
+    height: 250px;
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bioimage bio'
+    'job1 job2';
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+}
+
+.bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background: darken($primary-color, 2);
+    border-top: 4px solid set-text-color($primary-color);
+    border-left: 15px solid set-text-color($primary-color);
+    border-bottom: 15px solid set-text-color($primary-color);
+    border-right: 1px solid set-text-color($primary-color);
+}
+
+.job-1 {
+    grid-area: job1;
+    padding: 0.5rem;
+    background: darken($primary-color, 4);
+    border-top: 4px solid set-text-color($primary-color);
+    border-left: 15px solid set-text-color($primary-color);
+    border-bottom: 15px solid set-text-color($primary-color);
+    border-right: 1px solid set-text-color($primary-color);
+}
+
+.job-2 {
+    grid-area: job2;
+    padding: 0.5rem;
+    background: darken($primary-color, 6);
+    border-top: 4px solid set-text-color($primary-color);
+    border-left: 15px solid set-text-color($primary-color);
+    border-bottom: 15px solid set-text-color($primary-color);
+    border-right: 1px solid set-text-color($primary-color);
+}
+
+@import 'mobile';
