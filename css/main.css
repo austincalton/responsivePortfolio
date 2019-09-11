@@ -318,6 +318,8 @@ main#about p {
   main#home h1 {
     margin-top: 10vh;
     font-size: 4rem; }
+  .sm-heading {
+    padding: 0.2rem 0.2rem; }
   main#about h1 {
     margin-top: 10vh;
     font-size: 4rem; }
