@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Julius+Sans+One|Monoton|Montserrat+Subrayada|Pontano+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Julius+Sans+One|Monoton|Montserrat+Subrayada|Pompiere|Pontano+Sans&display=swap");
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -175,6 +175,9 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
+main#about p {
+  font-family: 'Pontano Sans', sans-serif; }
+
 .bio-image {
   width: 250px;
   height: 250px; }
@@ -193,7 +196,7 @@ main {
 
 .bio {
   grid-area: bio;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0.5rem;
   background: #295985;
   border-top: 4px solid #fff;
@@ -304,7 +307,12 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  main#contact h1 {
+    margin-top: 5vh;
+    font-size: 5rem; }
+  .boxes div {
+    font-size: 1.6rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
