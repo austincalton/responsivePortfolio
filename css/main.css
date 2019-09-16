@@ -106,13 +106,21 @@
 * {
   box-sizing: border-box; }
 
+@keyframes pageLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 body {
   background: #2B5E8D;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI';
-  line-height: 1.5; }
+  line-height: 1.5;
+  animation-name: pageLoad;
+  animation-duration: 4s; }
   body#bg-img {
     background: url("../img/coding-setup.jpg");
     background-attachment: fixed;
@@ -171,7 +179,9 @@ main {
         color: #eece1a;
         transition: all 0.5s ease-out; }
   main#home {
-    overflow: hidden; }
+    overflow: hidden;
+    animation-name: pageLoad;
+    animation-duration: 4s; }
     main#home h1 {
       margin-top: 20vh; }
 
@@ -319,7 +329,7 @@ main#about p {
     margin-top: 10vh;
     font-size: 4rem; }
   .sm-heading {
-    font-size: 0.3rem; }
+    font-size: 1rem; }
   main#about h1 {
     margin-top: 10vh;
     font-size: 4rem; }
